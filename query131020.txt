@@ -1,0 +1,52 @@
+1.
+
+SELECT `name`, `lastname` 
+FROM `ospiti` 
+WHERE `document_type` = "CI";
+
+2. 
+SELECT `name`, `lastname` 
+FROM `ospiti` 
+WHERE `date_of_birth` >= "1988-01-01";
+
+
+3.
+SELECT `name`, `lastname` 
+FROM `ospiti` 
+WHERE `date_of_birth` < CURRENT_DATE - INTERVAL 20 YEAR;
+
+
+4.
+SELECT *
+FROM `ospiti` 
+WHERE `name` LIKE 'd%'; 
+
+
+5.
+SELECT SUM(`price`)
+FROM `pagamenti`
+WHERE `status` = "accepted";
+
+
+6.
+SELECT MAX(`price`)
+FROM `pagamenti`
+WHERE `status` = "accepted";
+
+
+7.
+SELECT `name`, `lastname` 
+FROM `ospiti` 
+WHERE `document_type` = "Driver_License"
+AND `date_of_birth` >= "1975-01-01"
+AND `date_of_birth`<= "1975-12-31";
+
+SELECT `name`, `lastname` 
+FROM `ospiti` 
+WHERE `document_type` = "Driver_License"
+AND `date_of_birth` BETWEEN "1975-01-01" AND "1975-12-31";
+
+
+8.
+SELECT SUM(`beds`) AS `totale_posti_letto` 
+FROM `stanze`;
