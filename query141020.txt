@@ -1,0 +1,14 @@
+group by
+
+1.
+SELECT COUNT(id) 
+FROM `ospiti` 
+GROUP BY `date_of_birth`;
+
+2.
+SELECT SUM(`price`)
+FROM `pagamenti` 
+GROUP BY `status`;
+
+3.
+
